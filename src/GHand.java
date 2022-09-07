@@ -27,7 +27,7 @@ public class GHand extends GCompound {
     }
 
     // get the total value of the hand
-    private int getTotal(){
+    public int getTotal(){
         return hand.getTotal();
     }
 
@@ -36,14 +36,14 @@ public class GHand extends GCompound {
         cards[index].flip();
     }
 
-    // draw a card from the deck ('hit')
+    // draw a card from the deck (this is called a 'hit' in Blackjack)
     public void hit(){
         hand.hit();
-        //make a new gCard using the card our hand just drew
+        // make a new GCard using the card our hand just drew
         Card temp = hand.getCard(hand.getCount()-1);
         GCard gcard = new GCard(temp);
-        //put that card in cards
-        System.out.println("Hand count is now " + hand.getCount());
+
+        // put that GCard in gcards
         cards[hand.getCount()-1] = gcard;
 
         // add the new gcard to the compound

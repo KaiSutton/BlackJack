@@ -24,7 +24,7 @@ public class GCard extends GCompound {
         GRect border = new GRect(109, 152);
         add(border);
         // make a GRect for the back of the card
-        GRect back = new GRect(107, 150);
+        back = new GRect(107, 150);
         back.setFillColor(Color.RED);
         back.setFilled(true);
         // add the back to the compound

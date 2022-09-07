@@ -25,22 +25,22 @@ public class Hand {
         int sum = 0;
         int aces = 0;
 
-        //raw total
-        for (int i = 0; i < count; i++) {
+        // raw total
+        for(int i = 0; i < count; i++){
             sum += CARDS[i].getValue();
 
             if(CARDS[i].getFace() == Card.Face.ACE){
                 ++aces;
             }
-
         }
 
-        // save me pls thx
+        // save me plox
         while(sum > 21 && aces > 0){
             sum -= 10;
-            aces--;
+            --aces;
         }
 
+        // actual total
         return sum;
     }
 
